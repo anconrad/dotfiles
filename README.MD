@@ -16,3 +16,9 @@ run bootstrap.sh as a user
 ```bash
 ~/.dotfiles/bootstrap.sh
 ```
+
+change to root and set zsh as default shell
+```bash
+sudo su
+chsh -s $(which zsh) root
+```

@@ -22,3 +22,8 @@ change to root and set zsh as default shell
 sudo su
 chsh -s $(which zsh) root
 ```
+
+---
+[download and install jet brains mono font](https://www.jetbrains.com/lp/mono/)
+
+https://blog.danskingdom.com/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/

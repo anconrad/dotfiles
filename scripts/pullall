@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Pulls all git repositories in the current directory
+
+set -euo pipefail
+
+#
+
+found_git_repo=false
+
+for dir in ./*/
+do
+  if [ -d "$dir/.git" ]; then
+    found_git_repo=true
+    branch=$(git -C "$dir" rev-parse --abbrev-ref HEAD)
+    echo "Pulling in $dir on branch $branch"
+    git -C "$dir" pull --verbose
+  fi
+done
+
+if [ "$found_git_repo" = false ]; then
+  echo "Error: No .git directory found in any subdirectory."
+  exit 1
+fi

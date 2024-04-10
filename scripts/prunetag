@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# iterates over branches without remote and deletes them
+
+set -euo pipefail
+
+#
+
+git fetch --tags
+
+remote_tags=$(git ls-remote --tags origin | awk -F'/' '{print $3}')
+local_tags=$(git tag -l)
+
+for local_tag in $local_tags
+do
+    if ! echo "$remote_tags" | grep -q "$local_tag"; then
+        git tag -d $local_tag
+    fi
+done

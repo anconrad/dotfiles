@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# symlinks zsh dotfiles from current user into /root
+# symlinks zsh dotfiles and scripts
 
 set -euo pipefail
 

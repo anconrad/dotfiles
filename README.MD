@@ -7,14 +7,15 @@ install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) as a user
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-clone this repository into ~/.dotfiles
+clone this repository into ~/git-repos/dotfiles (or ~/.dotfiles)
 ```bash
-git clone git@github.com:anconrad/dotfiles.git ~/.dotfiles
+mkdir -p ~/git-repos/dotfiles
+git clone git@github.com:anconrad/dotfiles.git ~/git-repos/dotfiles
 ```
 
 run bootstrap.sh as a user
 ```bash
-~/.dotfiles/bootstrap.sh
+~/git-repos/dotfiles/bootstrap.sh
 ```
 
 change to root and set zsh as default shell

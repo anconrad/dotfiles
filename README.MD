@@ -1,26 +1,26 @@
 ### Usage
-- 1) install prereqs
+1. install prereqs
 ```bash
 apt install git curl zsh
 ```
 
-- 2) install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) as a user
+2. install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) as a user
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-clone this repository into ~/git-repos/dotfiles (or ~/.dotfiles)
+3. clone this repository into ~/git-repos/dotfiles (or ~/.dotfiles)
 ```bash
 mkdir -p ~/git-repos/dotfiles
 git clone https://github.com/anconrad/dotfiles.git ~/git-repos/dotfiles
 ```
 
-run bootstrap.sh as a user
+4. run bootstrap.sh as a user
 ```bash
 ~/git-repos/dotfiles/bootstrap.sh
 ```
 
-change to root and set zsh as default shell
+5. change to root and set zsh as default shell
 ```bash
 sudo su
 chsh -s $(which zsh) root

@@ -20,16 +20,16 @@ git_custom_status() {
   fi
 }
 
-# Define color variables
-USER_COLOR='%{$fg[red]%}'
+
 PATH_COLOR='%{$fg_bold[cyan]%}'
-PROMPT_SYMBOL_COLOR='%{$fg_bold[white]%}'
 
 # Check if the current user is root
 if [[ $(id -u) -eq 0 ]]; then
-  USER_PROMPT="${USER_COLOR}%n${RESET_COLOR}"
+  PROMPT_SYMBOL='#'
+  PROMPT_SYMBOL_COLOR='%{$fg_bold[red]%}'
 else
-  USER_PROMPT=""
+  PROMPT_SYMBOL='$'
+  PROMPT_SYMBOL_COLOR='%{$fg_bold[white]%}'
 fi
 
-PROMPT="${USER_PROMPT}\$(git_custom_status)${PATH_COLOR}[%~% ]${PROMPT_SYMBOL_COLOR}%B$%b${RESET_COLOR}"
+PROMPT="\$(git_custom_status)${PATH_COLOR}[%~% ]${PROMPT_SYMBOL_COLOR}%B${PROMPT_SYMBOL}%b${RESET_COLOR}"

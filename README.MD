@@ -1,8 +1,10 @@
-### PreReq
-Have a Linux with apt and git ssh setup
-
 ### Usage
-install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) as a user
+- 1) install prereqs
+```bash
+apt install git curl zsh
+```
+
+- 2) install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) as a user
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -10,7 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 clone this repository into ~/git-repos/dotfiles (or ~/.dotfiles)
 ```bash
 mkdir -p ~/git-repos/dotfiles
-git clone git@github.com:anconrad/dotfiles.git ~/git-repos/dotfiles
+git clone https://github.com/anconrad/dotfiles.git ~/git-repos/dotfiles
 ```
 
 run bootstrap.sh as a user
